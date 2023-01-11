@@ -1,0 +1,9 @@
+include(apt-dependencies.cmake)
+
+AddProject(nasoq
+  GITHUB mmurooka/nasoq
+  GIT_TAG origin/cmake-install
+  CMAKE_ARGS -DNASOQ_BLAS_BACKEND=OpenBLAS -DNASOQ_USE_CLAPACK=ON -DNASOQ_BUILD_CLI=OFF -DNASOQ_BUILD_EXAMPLES=OFF -DNASOQ_BUILD_TESTS=OFF -DNASOQ_BUILD_DOCS=OFF
+)
+
+
