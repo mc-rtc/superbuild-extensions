@@ -1,10 +1,10 @@
-include(jrl-qp.cmake)
-include(qpOASES.cmake)
-include(osqp-eigen.cmake)
-include(nasoq.cmake)
-include(hpipm.cmake)
-include(proxsuite.cmake)
-include(qpmad.cmake)
+include(${CMAKE_CURRENT_LIST_DIR}/jrl-qp.cmake)
+include(${CMAKE_CURRENT_LIST_DIR}/qpOASES.cmake)
+include(${CMAKE_CURRENT_LIST_DIR}/osqp-eigen.cmake)
+include(${CMAKE_CURRENT_LIST_DIR}/nasoq.cmake)
+include(${CMAKE_CURRENT_LIST_DIR}/hpipm.cmake)
+include(${CMAKE_CURRENT_LIST_DIR}/proxsuite.cmake)
+include(${CMAKE_CURRENT_LIST_DIR}/qpmad.cmake)
 
 set(QP_SOLVER_COLLECTION_DEPENDS
   eigen-qld

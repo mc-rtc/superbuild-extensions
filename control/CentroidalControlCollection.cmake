@@ -1,5 +1,5 @@
-include(solvers/QpSolverCollection.cmake)
-include(NMPC.cmake)
+include(${CMAKE_CURRENT_LIST_DIR}/../solvers/QpSolverCollection.cmake)
+include(${CMAKE_CURRENT_LIST_DIR}/NMPC.cmake)
 
 AddProject(CentroidalControlCollection
   GITHUB isri-aist/CentroidalControlCollection

@@ -1,4 +1,4 @@
-include(apt-dependencies.cmake)
+include(${CMAKE_CURRENT_LIST_DIR}/apt-dependencies.cmake)
 
 AddProject(nasoq
   GITHUB mmurooka/nasoq

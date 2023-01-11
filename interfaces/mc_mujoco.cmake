@@ -1,4 +1,4 @@
-include(../simulation/MuJoCo.cmake)
+include(${CMAKE_CURRENT_LIST_DIR}/../simulation/MuJoCo.cmake)
 
 AddProject(mc_mujoco
   GITHUB rohanpsingh/mc_mujoco

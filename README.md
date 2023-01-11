@@ -12,9 +12,10 @@ Usage
 
 For example:
 ```cmake
-include(superbuild-extensions/controllers/BaseLineWalkingController.cmake)
-include(superbuild-extensions/gui/mc_rtc-magnum.cmake)
-include(superbuild-extensions/interfaces/mc_mujoco.cmake)
+set(EXTENSIONS_DIR ${CMAKE_CURRENT_LIST_DIR}/superbuild-extensions)
+include(${EXTENSIONS_DIR}/controllers/BaseLineWalkingController.cmake)
+include(${EXTENSIONS_DIR}/gui/mc_rtc-magnum.cmake)
+include(${EXTENSIONS_DIR}/interfaces/mc_mujoco.cmake)
 ```
 
 Note: the name of the file (`local.cmake`) does not matter as long as it ends with the `.cmake` extension

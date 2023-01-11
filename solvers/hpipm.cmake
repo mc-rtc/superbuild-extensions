@@ -1,4 +1,4 @@
-include(blasfeo.cmake)
+include(${CMAKE_CURRENT_LIST_DIR}/blasfeo.cmake)
 
 AddProject(hpipm
   GITHUB giaf/hpipm
