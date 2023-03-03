@@ -6,6 +6,8 @@ include(${CMAKE_CURRENT_LIST_DIR}/hpipm.cmake)
 include(${CMAKE_CURRENT_LIST_DIR}/proxsuite.cmake)
 include(${CMAKE_CURRENT_LIST_DIR}/qpmad.cmake)
 
+include(${CMAKE_CURRENT_LIST_DIR}/../utils/GTest.cmake)
+
 set(QP_SOLVER_COLLECTION_DEPENDS
   eigen-qld
   eigen-quadprog
@@ -22,6 +24,10 @@ if(WITH_LSSOL)
   list(APPEND QP_SOLVER_COLLECTION_DEPENDS eigen-lssol)
 else()
   set(NOT_WITH_LSSOL ON)
+endif()
+
+if(TARGET googletest)
+  list(APPEND QP_SOLVER_COLLECTION_DEPENDS googletest)
 endif()
 
 AddProject(QpSolverCollection
