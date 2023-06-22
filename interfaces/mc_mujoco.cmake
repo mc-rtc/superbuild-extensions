@@ -1,5 +1,7 @@
 include(${CMAKE_CURRENT_LIST_DIR}/../simulation/MuJoCo.cmake)
 
+AptInstall(libxrandr-dev libxinerama-dev libxcursor-dev libxi-dev libglew-dev)
+
 AddProject(mc_mujoco
   GITHUB rohanpsingh/mc_mujoco
   GIT_TAG origin/main
