@@ -1,4 +1,4 @@
-set(MUJOCO_VERSION 2.3.7)
+set(MUJOCO_VERSION 3.0.0)
 
 if(UNIX AND NOT APPLE AND NOT EMSCRIPTEN)
   set(MUJOCO_URL "https://github.com/deepmind/mujoco/releases/download/${MUJOCO_VERSION}/mujoco-${MUJOCO_VERSION}-linux")
