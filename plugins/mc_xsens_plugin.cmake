@@ -4,7 +4,7 @@ if(WITH_XSENS_STREAMING)
   
   AddProject(xsens_streaming
     GITHUB arntanguy/xsens_streaming
-    GIT_TAG origin/master
+    GIT_TAG origin/main
   )
 endif()
 
