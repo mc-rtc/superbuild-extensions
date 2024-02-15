@@ -29,6 +29,6 @@ if(WITH_HRP4)
   AddProject(hrp4_mj_description
     GITE mc-hrp4/hrp4_mj_description
     GIT_TAG origin/master
-    DEPENDS mc_mujoco hrp4
+    DEPENDS mc_mujoco hrp4_description
   )
 endif()
