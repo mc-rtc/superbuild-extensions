@@ -1,7 +1,5 @@
-option(WITH_XSENS_STREAMING "Build Xsens streaming plugin with xsens_streaming/mtsdk (live mode)" ON)
+option(WITH_XSENS_STREAMING "Build Xsens streaming plugin with xsens_streaming (live mode) - MTSDK must be installed manually" ON)
 if(WITH_XSENS_STREAMING)
-  include(${CMAKE_CURRENT_LIST_DIR}/mtsdk.cmake)
-  
   AddProject(xsens_streaming
     GITHUB arntanguy/xsens_streaming
     GIT_TAG origin/main
