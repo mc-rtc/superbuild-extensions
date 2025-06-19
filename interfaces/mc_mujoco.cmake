@@ -32,3 +32,11 @@ if(WITH_HRP4)
     DEPENDS mc_mujoco hrp4_description
   )
 endif()
+
+if(WITH_RHPS1)
+  AddProject(rhps1_mj_description
+    GITHUB_PRIVATE isri-aist/rhps1_mj_description
+    GIT_TAG origin/master
+    DEPENDS mc_mujoco rhps1_description
+  )
+endif()
