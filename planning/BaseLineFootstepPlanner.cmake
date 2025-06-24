@@ -1,20 +1,15 @@
-if(WITH_ROS_SUPPORT)
-  set(ROS_SUPPORT_PKGS
+if(WITH_ROS_SUPPORT AND $ENV{ROS_VERSION} EQUAL 1)
+  AptInstall(
     ros-${ROS_DISTRO}-tf2-eigen
+    ros-${ROS_DISTRO}-sbpl
   )
-endif()
-
-if(NOT WITH_ROS_SUPPORT)
+else()
   AddProject(sbpl
     GITHUB sbpl/sbpl
     GIT_TAG origin/master
     CMAKE_ARGS -DCMAKE_POLICY_VERSION_MINIMUM=3.5
-    APT_DEPENDENCIES ${ROS_SUPPORT_PKGS}
-    DEPENDS sbpl
   )
   set(BaseLineFootstepPlanner_DEPENDS DEPENDS sbpl)
-else()
-  set(BaseLineFootstepPlanner_DEPENDS)
 endif()
 
 AddProject(BaseLineFootstepPlanner
