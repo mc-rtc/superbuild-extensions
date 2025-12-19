@@ -40,3 +40,11 @@ if(WITH_RHPS1)
     DEPENDS mc_mujoco rhps1_description
   )
 endif()
+
+if(WITH_HUMAN)
+  AddProject(human_mj_description
+    GITHUB Hugo-L3174/human_mj_description
+    GIT_TAG origin/main
+    DEPENDS mc_mujoco human_description
+  )
+endif()
